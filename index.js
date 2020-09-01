@@ -2,7 +2,7 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const score = document.getElementById('score');
 const startBtn = document.getElementById('start-btn');
-
+console.log(startBtn)
 
 const square = 10;
 
@@ -13,8 +13,8 @@ snake[0] = {
 }
 
 let food = {
-  x: Math.floor(Math.random() * 16 + 1) * square,
-  y: Math.floor(Math.random() * 12 + 1) * square
+  x: Math.floor(Math.random() * 10 + 1) * square,
+  y: Math.floor(Math.random() * 15 + 1) * square
 }
 
 let direction = 'right';
@@ -22,7 +22,7 @@ let direction = 'right';
 //creating background:
 
 function theBackground() {
-  ctx.fillStyle = "#76a27f";
+  ctx.fillStyle = "#77a581";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 
@@ -62,6 +62,7 @@ function getPoints() {
 let game;
 
 startBtn.addEventListener('click', function () { game = setInterval(theGame, 100) });
+
 
 document.addEventListener('keydown', snakeDirection);
 
@@ -116,8 +117,8 @@ function theGame() {
   if (positionX == food.x && positionY == food.y) {
     // eat.play();
     getPoints()
-    food.x = Math.floor(Math.random() * 16 + 1) * square;
-    food.y = Math.floor(Math.random() * 12 + 1) * square;
+    food.x = Math.floor(Math.random() * 10 + 1) * square;
+    food.y = Math.floor(Math.random() * 10 + 1) * square;
   } else {
     snake.pop();
   }
@@ -146,13 +147,13 @@ function theGame() {
 
 function draWFinalScore() {
 
-  ctx.fillStyle = "#76a27f";
+  ctx.fillStyle = "#77a581";
   ctx.clearRect(0, 0, 25 * square, 20 * square);
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
   ctx.font = 'bold 20px serif';
   ctx.fillStyle = '#333333';
-  ctx.fillText("Game Over :(", 6 * square, 8 * square);
+  ctx.fillText("Game Over", 3.5 * square, 7 * square);
 }
 
 function theGameOver() {

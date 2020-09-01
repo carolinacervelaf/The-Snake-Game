@@ -1,3 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 #canvas {
-    border-radius: 5px;
+    border-radius: 9px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 11.1rem;
+    margin-bottom: auto;
+}
+
+.phone {
+    background-image: url('./Images/oldcell.png');
+    background-repeat: no-repeat;
+    background-size: 35rem;
+    background-position-y: 50%;
+    background-position-x: 50%;
+    position: absolute;
+    border: 1px solid black;
+    height: 40rem;
+    width: 80rem;
+    
+
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+}
+
+#score {
+   font-family: 'Press Start 2P', cursive;
+   font-size: 1.6rem;
+   color: ;
+   align-items: center;
+}
+
+#start-btn {
+    z-index: 1000;
+}
+
+.content {
+    display: flex;
+    border: 1px solid red;
+    width: 25rem;
+    height: 38rem;
+    align-items: center;
+    flex-direction: column;
+    
+
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+
 }
