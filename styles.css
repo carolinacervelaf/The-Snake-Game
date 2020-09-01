@@ -4,9 +4,8 @@
     border-radius: 9px;
     display: block;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: 12.1rem;
     margin-top: 11.1rem;
-    margin-bottom: auto;
 }
 
 .phone {
@@ -14,43 +13,48 @@
     background-repeat: no-repeat;
     background-size: 35rem;
     background-position-y: 50%;
-    background-position-x: 50%;
+    background-position-x: 100%;
     position: absolute;
-    border: 1px solid black;
     height: 40rem;
-    width: 80rem;
-    
-
+    width: 55rem;
 }
 
 h1 {
     font-family: 'Press Start 2P', cursive;
+    color: #77a581;
 }
 
 #score {
    font-family: 'Press Start 2P', cursive;
-   font-size: 1.6rem;
-   color: ;
-   align-items: center;
+   font-size: 1.2rem;
+ 
 }
 
 #start-btn {
     z-index: 1000;
+    font-family: 'Press Start 2P', cursive;
+    margin-top: 1rem;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #77a581;
+}
+
+#start-btn:hover{
+   background-color:white; 
+   transition-duration: 0.5s;
 }
 
 .content {
     display: flex;
-    border: 1px solid red;
     width: 25rem;
     height: 38rem;
     align-items: center;
     flex-direction: column;
-    
-
 }
 
 body{
     display: flex;
     flex-direction: column;
-
+    background-color: #d9d7d8;
 }
