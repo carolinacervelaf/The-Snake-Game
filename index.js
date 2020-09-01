@@ -1,6 +1,8 @@
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const score = document.getElementById('score');
+const startBtn = document.getElementById('start-btn');
+
 
 const square = 10;
 
@@ -21,9 +23,7 @@ let direction = 'right';
 
 function theBackground() {
   ctx.fillStyle = "#76a27f";
-  ctx.strokestyle = "black"
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-  ctx.strokeRect(0, 0, canvas.width, canvas.height);
 }
 
 //creating the snake:
@@ -52,16 +52,21 @@ dead.src = "./sounds/dead.wav"
 eat.src = "./sounds/eat.wav"
 move.src = "./sounds/moves.wav"
 
+//the score:
+
 function getPoints() {
   score.innerHTML = 'Score: \n' + (snake.length - 0);
 }
 
-
 //click event - teclado:
+let game;
+
+startBtn.addEventListener('click', function () { game = setInterval(theGame, 100) });
 
 document.addEventListener('keydown', snakeDirection);
 
 function snakeDirection(event) {
+
   if (event.keyCode == 37 && direction != "right") {
     // move.play();
     direction = "left";
@@ -84,7 +89,6 @@ function snakeDirection(event) {
 }
 
 function theGame() {
-
   theBackground();
   theSnake();
   theFood();
@@ -140,7 +144,16 @@ function theGame() {
 
 }
 
-let game = setInterval(theGame, 100);
+function draWFinalScore() {
+
+  ctx.fillStyle = "#76a27f";
+  ctx.clearRect(0, 0, 25 * square, 20 * square);
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  ctx.font = 'bold 20px serif';
+  ctx.fillStyle = '#333333';
+  ctx.fillText("Game Over :(", 6 * square, 8 * square);
+}
 
 function theGameOver() {
 
@@ -149,11 +162,12 @@ function theGameOver() {
     if (collision) {
       //dead.play();
       clearInterval(game);
-      alert("Game Over :(")
+      draWFinalScore();
     }
   }
 }
 
+theBackground();
 
 
 
