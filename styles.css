@@ -12,7 +12,7 @@ body{
     display: flex;
     flex-direction: column;
     background-color: #d9d7d8;
-    background-image: url('/images/pixel.jpg');
+    background-image: url('./Images/pixel.jpg');
     background-size: cover;
     padding-left: 10rem;
 }
@@ -27,7 +27,7 @@ body{
 }
 
 .phone {
-    background-image: url('/images/oldcell.png');
+    background-image: url('./Images/oldcell.png');
     background-repeat: no-repeat;
     background-size: 35rem;
     background-position-y: 50%;

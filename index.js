@@ -49,9 +49,9 @@ window.onload = function () {
   const eat = new Audio();
   const move = new Audio();
 
-  dead.src = "/sounds/dead.wav"
-  eat.src = "/sounds/eat.wav"
-  move.src = "/sounds/moves.wav"
+  dead.src = "/Sounds/dead.wav"
+  eat.src = "/Sounds/eat.wav"
+  move.src = "/Sounds/moves.wav"
 
   dead.volume = 0.2;
   eat.volume = 0.2;
