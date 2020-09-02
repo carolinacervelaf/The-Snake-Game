@@ -43,6 +43,7 @@ window.onload = function () {
     ctx.fillRect(food.x, food.y, square - 2, square - 2);
   }
 
+  let test = [];
   //load audio files:
 
   const dead = new Audio();
