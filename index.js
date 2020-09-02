@@ -14,7 +14,7 @@ snake[0] = {
 
 let food = {
   x: Math.floor(Math.random() * 10 + 1) * square,
-  y: Math.floor(Math.random() * 15 + 1) * square
+  y: Math.floor(Math.random() * 10 + 1) * square
 }
 
 let direction = 'right';
@@ -61,7 +61,7 @@ function getPoints() {
 //click event - teclado:
 let game;
 
-startBtn.addEventListener('click', function () { game = setInterval(theGame, 100) });
+startBtn.addEventListener('click', function () { game = setInterval(theGame, 130) });
 
 
 document.addEventListener('keydown', snakeDirection);
@@ -151,7 +151,7 @@ function draWFinalScore() {
   ctx.clearRect(0, 0, 25 * square, 20 * square);
   ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-  ctx.font = 'bold 20px serif';
+  ctx.font = 'bold 20px courier';
   ctx.fillStyle = '#333333';
   ctx.fillText("Game Over", 3.5 * square, 7 * square);
 }

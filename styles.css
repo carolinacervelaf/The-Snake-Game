@@ -1,5 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
+.content {
+    display: flex;
+    width: 32rem;
+    height: 35rem;
+    align-items: center;
+    flex-direction: column;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #d9d7d8;
+    background-image: url('./Images/pixel.jpg');
+    background-size: cover;
+    padding-left: 10rem;
+}
+
+
 #canvas {
     border-radius: 9px;
     display: block;
@@ -16,18 +34,37 @@
     background-position-x: 100%;
     position: absolute;
     height: 40rem;
-    width: 55rem;
+    width: 60rem;
 }
 
 h1 {
     font-family: 'Press Start 2P', cursive;
-    color: #77a581;
+    color:'#333333';
+    
 }
 
 #score {
    font-family: 'Press Start 2P', cursive;
    font-size: 1.2rem;
+   margin-top: 1rem;
  
+}
+
+.content img {
+    width: 10rem;
+    height: 5rem;
+    display: flex;
+    align-self: start;
+    justify-content: flex-start;
+    
+}
+
+.content li {
+ font-family: 'Press Start 2P', cursive;
+ margin-top: 1rem;
+ margin-bottom: 0.5rem;
+ padding: 0.5rem;
+ line-height: 1.5rem;
 }
 
 #start-btn {
@@ -38,23 +75,10 @@ h1 {
     cursor: pointer;
     border-radius: 5px;
     background-color: #77a581;
+    width: 8rem;
 }
 
 #start-btn:hover{
    background-color:white; 
    transition-duration: 0.5s;
-}
-
-.content {
-    display: flex;
-    width: 25rem;
-    height: 38rem;
-    align-items: center;
-    flex-direction: column;
-}
-
-body{
-    display: flex;
-    flex-direction: column;
-    background-color: #d9d7d8;
 }
