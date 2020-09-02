@@ -49,9 +49,9 @@ window.onload = function () {
   const eat = new Audio();
   const move = new Audio();
 
-  dead.src = "https://raw.githubusercontent.com/carolinacervelaf/The-Snake-Game/gh-pages/sounds/dead.wav"
-  eat.src = "https://raw.githubusercontent.com/carolinacervelaf/The-Snake-Game/gh-pages/sounds/eat.wav"
-  move.src = "https://raw.githubusercontent.com/carolinacervelaf/The-Snake-Game/gh-pages/sounds/moves.wav"
+  dead.src = "/sounds/dead.wav"
+  eat.src = "/sounds/eat.wav"
+  move.src = "/sounds/moves.wav"
 
   dead.volume = 0.2;
   eat.volume = 0.2;
