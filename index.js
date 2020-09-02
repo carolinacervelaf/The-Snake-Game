@@ -52,6 +52,10 @@ dead.src = "./sounds/dead.wav"
 eat.src = "./sounds/eat.wav"
 move.src = "./sounds/moves.wav"
 
+dead.volume = 0.2;
+eat.volume = 0.2;
+move.volume = 0.2;
+
 //the score:
 
 function getPoints() {
@@ -69,22 +73,22 @@ document.addEventListener('keydown', snakeDirection);
 function snakeDirection(event) {
 
   if (event.keyCode == 37 && direction != "right") {
-    // move.play();
+    move.play();
     direction = "left";
   }
 
   if (event.keyCode == 38 && direction != "down") {
-    //move.play();
+    move.play();
     direction = "up";
   }
 
   if (event.keyCode == 39 && direction != "left") {
-    //move.play();
+    move.play();
     direction = "right";
   }
 
   if (event.keyCode == 40 && direction != "up") {
-    //move.play();
+    move.play();
     direction = "down";
   }
 }
@@ -115,7 +119,7 @@ function theGame() {
   }
 
   if (positionX == food.x && positionY == food.y) {
-    // eat.play();
+    eat.play();
     getPoints()
     food.x = Math.floor(Math.random() * 10 + 1) * square;
     food.y = Math.floor(Math.random() * 10 + 1) * square;
@@ -161,7 +165,7 @@ function theGameOver() {
   for (let i = 4; i < snake.length; i++) {
     const collision = snake[i].x === snake[0].x && snake[i].y === snake[0].y
     if (collision) {
-      //dead.play();
+      dead.play();
       clearInterval(game);
       draWFinalScore();
     }
