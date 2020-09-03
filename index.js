@@ -3,6 +3,7 @@ window.onload = function () {
   const ctx = canvas.getContext('2d');
   const score = document.getElementById('score');
   const startBtn = document.getElementById('start-btn');
+  const restartBtn = document.getElementById('restart-btn');
 
 
   const square = 10;
@@ -54,8 +55,8 @@ window.onload = function () {
   move.src = "./Sounds/moves.wav"
 
   dead.volume = 0.2;
-  eat.volume = 0.2;
-  move.volume = 0.2;
+  eat.volume = 0.1;
+  move.volume = 0.1;
 
   //the score:
 
@@ -126,6 +127,7 @@ window.onload = function () {
       food.y = Math.floor(Math.random() * 10 + 1) * square;
     } else {
       snake.pop();
+      theGameOver();
     }
 
     let snakeHead = {
@@ -169,6 +171,8 @@ window.onload = function () {
         dead.play();
         clearInterval(game);
         draWFinalScore();
+        snake = [];
+        food = {};
       }
     }
   }
